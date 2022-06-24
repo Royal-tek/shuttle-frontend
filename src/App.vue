@@ -1,30 +1,38 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    
   </div>
   <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import axios from 'axios'
 
-#nav {
-  padding: 30px;
+export default {
+  name : 'App',
+  beforeCreate(){
+    this.$store.commit('initializeStore')
+    const token = this.$store.state.token
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    if (token){
+      axios.defaults.headers.common['Authorization'] = 'Token '+ token
+    }
+    else{
+      axios.defaults.headers.common['Authorization'] = ''
     }
   }
+}
+</script>
+
+<style lang="scss">
+*{
+  h1, h2, h3, h4, h5, h6, p, a, span{
+    font-family: 'Charis SIL', serif;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Stoke', serif;
+}
 }
 </style>
