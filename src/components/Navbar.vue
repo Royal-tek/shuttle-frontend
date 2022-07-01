@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-            <a class="nav-link text-white" href="/">Home</a>
+            <router-link class="nav-link text-white" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link text-white" href="/booking">BookNow</a>
+            <router-link class="nav-link text-white" to="/booking">BookNow</router-link>
             </li>
             <li class="nav-item me-2">
-            <a class="nav-link text-white" href="/driver-admin">Admin</a>
+            <router-link class="nav-link text-white" to="/driver-admin">Admin</router-link>
             </li>
 
         
@@ -26,9 +26,10 @@
             <a class="imgg me-1" style="display:inline-block"></a>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" style="font-weight:bold;" href="/profile">Profile</a></li>
-                <li><a class="dropdown-item" style="font-weight:bold;" href="/settings">Settings</a></li>
-                <li><a class="dropdown-item" style="font-weight:bold;" href="/login">Login</a></li>
+                <li><router-link class="dropdown-item" style="font-weight:bold;" to="/profile">Profile</router-link></li>
+                <li><router-link class="dropdown-item" style="font-weight:bold;" to="/settings">Settings</router-link></li>
+                <li v-if="$store.state.isAuthenticated == true"><a class="dropdown-item" style="font-weight:bold;" href="/logout">Logout</a></li>
+                <li v-if="$store.state.isAuthenticated == false"><a class="dropdown-item" style="font-weight:bold;" href="/login">Login</a></li>
             </ul>
             </li>
 

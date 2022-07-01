@@ -13,7 +13,7 @@
                 <input type="password" class="form-control shadow-none py-3" placeholder="Confirm Password" v-model="password2">
             </div>
             <div class="input-group my-3">
-                <input type="submit" value="Register" class="btn btn-primary" id="submitBtn">
+                <input type="submit" value="Register" class="btn btn-primary" id="submitBtn" style="background-color:rgb(7, 52, 17); color:white">
             </div>
             <p class="text-center" style="font-weight: bold;">Already have an account? <router-link to="/login" style="text-decoration:none; color:white;">Login</router-link></p>
 
@@ -63,14 +63,14 @@ export default {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-image: linear-gradient(rgb(188, 200, 223), rgb(45, 126, 238));
+    background-image: linear-gradient(rgb(82, 176, 104), rgb(227, 240, 231));
     height: 100vh;
 }
 .form{
     width: 30%;
     border-radius: 20px;
     padding: 50px 10px;
-    background-color: rgb(111, 111, 183) !important;
+    background-color: rgb(82, 176, 104) !important;
 }
 .input-group{
     width: 80%;

@@ -6,7 +6,7 @@
         <div class="row" style="height: 100%;">
           <div class="col-md-6 text-part">
             <h1 class="text-dark text-center text-uppercase py-3" style="font-weight:500;">order your shuttle now</h1>
-            <a href="/booking" style="text-decoration:none; width: 100%;" class="text-dark"><input type="submit" value="Book Now" class="btn  ride-btn py-3"></a>
+            <router-link to="/booking" style="text-decoration:none; width: 100%;" class="text-dark"><input type="submit" value="Book Now" class="btn  ride-btn py-3"></router-link>
           </div>
           <div class="col-md-6 img-part">
             <img src="../assets/bus.jpg" class="img-fluid" alt="">

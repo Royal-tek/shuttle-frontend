@@ -86,12 +86,12 @@
                     >
                         <div class="driver-box" :class="selectedId == driver.id ? 'driver-active' : null">
                             <div class="top-part">
-                                <p>Afonime Royal</p>
+                                <p>{{driver.name}}</p>
                                 <img src="../assets/1.jpg" class="img-fluid mb-3" alt="">
                             </div>
                             <div class="middle-part">
                             <p>Plate No :</p>
-                            <p> kjduejuri1</p>
+                            <p> {{driver.plate_no}}</p>
                             
                             </div><hr>
                             <div class="bottom-part">
@@ -145,13 +145,19 @@ export default {
             selectedId: '',
             drivers: [
                 {
-                    id: 123
+                    id: 123,
+                    name : 'Afonime Royal',
+                    plate_no : 'kjdumdkms'
                 },
                 {
-                    id: 124
+                    id: 124,
+                    name : 'Oyebode Rejoice',
+                    plate_no : 'hbwebwewe'
                 },
                 {
-                    id: 125
+                    id: 125,
+                    name : 'Adesina Ruth',
+                    plate_no : 'nnishdkd'
                 }
             ]
         }

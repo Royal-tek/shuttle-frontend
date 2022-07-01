@@ -4,6 +4,8 @@ import Booking from '../views/Booking.vue'
 import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 import DriverAdmin from '../views/DriverAdmin.vue'
+import DriverRegister from '../views/DriverRegister.vue'
+import Logout from '../views/Logout.vue'
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: '/driver-admin',
     name: 'DriverAdmin',
     component: DriverAdmin
+  },
+  {
+    path: '/driver-register',
+    name: 'DriverRegister',
+    component: DriverRegister
+  },
+  {
+    path: '/logout',
+    name: 'Logout',
+    component: Logout
   },
   
   {
